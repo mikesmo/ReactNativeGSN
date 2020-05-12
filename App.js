@@ -24,7 +24,7 @@ class App extends Component {
 
   votePressed = async () => {
 
-    const address = Voter.networks[161].address;
+    const address = Voter.networks[162].address;
     const abi = Voter.abi;
     const bytecode = Voter.bytecode;
     const contract = new ethers.Contract(address, abi, provider);
@@ -35,7 +35,9 @@ class App extends Component {
     
     let count = await contract.count();
 
-    console.log("count", count)
+    this.setState({
+      resultText: count.toString(),
+    });
   }
 
 
