@@ -1,0 +1,35 @@
+{
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject",
+    "test": "truffle test --reset --network",
+    "deploy": "FORCE_MIGRATION=true truffle migrate --reset --network",
+    "postinstall": "patch-package"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts-ethereum-package": "2.2.3",
+    "@openzeppelin/upgrades": "2.5.3",
+    "@openzeppelin/gsn-provider": "0.1.6",
+    "lightstreams-js-sdk": "git+https://github.com/lightstreams-network/lightstreams-js-sdk.git#v0.19.5",
+    "ethers": "file:../../ethers.js",
+    "expo": "~37.0.3",
+    "react": "~16.9.0",
+    "react-dom": "~16.9.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-37.0.1.tar.gz",
+    "react-native-web": "~0.11.7",
+    "truffle": "^5.1.24",
+    "patch-package": "^6.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.6",
+    "babel-preset-expo": "~8.1.0",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "dotenv": "^8.1.0"
+  },
+  "private": true
+}
